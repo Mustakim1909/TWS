@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TWS.Views.InvoicePage"
+             Title="Invoice">
+    <ScrollView>
+        <VerticalStackLayout Padding="10" Spacing="15">
+            <WebView x:Name="InvoiceWebView"
+                 HorizontalOptions="FillAndExpand"
+                 VerticalOptions="FillAndExpand" />
+            <!-- Print Button outside the border -->
+            <Button Text="SEND INVOICE" 
+         x:Name="PrintButton"
+         BackgroundColor="#2c3e50" 
+         TextColor="White" 
+         CornerRadius="5" 
+         Margin="0,0,0,0" 
+         HeightRequest="40"
+         Clicked="OnPrintButtonClicked"
+         HorizontalOptions="Fill"/>
+        </VerticalStackLayout>
+    </ScrollView>
+       
+</ContentPage>

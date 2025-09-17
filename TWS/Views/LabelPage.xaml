@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TWS.Views"
+             xmlns:converters="clr-namespace:TWS.Converters"
+             xmlns:zxing="clr-namespace:ZXing.Net.Maui.Controls;assembly=ZXing.Net.MAUI.Controls"
+             x:Class="TWS.Views.LabelPage"
+             Title="Shipping Label"
+             BackgroundColor="#f5f5f5">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="BoldLabel" TargetType="Label">
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="TextColor" Value="Black"/>
+            </Style>
+
+            <Style x:Key="RegularLabel" TargetType="Label">
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="TextColor" Value="Black"/>
+            </Style>
+
+            <Style x:Key="SmallLabel" TargetType="Label">
+                <Setter Property="FontSize" Value="10"/>
+                <Setter Property="TextColor" Value="Black"/>
+            </Style>
+
+            <Style x:Key="AmountLabel" TargetType="Label">
+                <Setter Property="FontSize" Value="24"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="Margin" Value="0,10,0,0"/>
+            </Style>
+            <converters:ToUpperConverter x:Key="ToUpperConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="10" Spacing="15">
+            <!-- Border around the entire label content -->
+            <Border Stroke="#2c3e50"
+                    StrokeThickness="1"
+                    x:Name="BorderContent"
+                    StrokeShape="RoundRectangle 5"
+                    BackgroundColor="White"
+                    Padding="15"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Fill">
+
+                <VerticalStackLayout Spacing="0" BindableLayout.ItemsSource="{Binding Orders}">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <VerticalStackLayout>
+                                <!-- Company Logo and Info -->
+                                <Grid ColumnDefinitions="Auto,*" RowDefinitions="Auto" Margin="0,0,0,10">
+                                    <Image Source="labellogo.jpg"
+                                           WidthRequest="50"
+                                           HeightRequest="50"
+                                           Aspect="AspectFit" 
+                                           HorizontalOptions="Start"
+                                           VerticalOptions="Center"/>
+                                    <VerticalStackLayout Grid.Column="1" Padding="10,0,0,0">
+                                        <Label Text="THE WATCH STUDIO" Style="{StaticResource BoldLabel}" FontSize="16"/>
+                                        <Label Text="Silkwala Matrket Near Aone Coco 395003 Surat Gujarat India" Style="{StaticResource RegularLabel}"/>
+                                        <Label Text="Phone: +91 93168 59248" Style="{StaticResource RegularLabel}"/>
+                                    </VerticalStackLayout>
+                                </Grid>
+
+                                <BoxView HeightRequest="2" Color="#2c3e50" Margin="0,5"/>
+
+                                <!-- Shipping From -->
+                                <Grid ColumnDefinitions="*,*" Margin="0,10,0,0">
+                                    <VerticalStackLayout>
+                                        <Label Text="SHIP FROM:" Style="{StaticResource BoldLabel}"/>
+                                        <Label Text="THE WATCH STUDIO" Style="{StaticResource BoldLabel}" Margin="0,5,0,0"/>
+                                        <Label Text="Silkwala Market Near Aone Coco 395003" Style="{StaticResource RegularLabel}"/>
+                                        <Label Text="Surat,Gujarat India" Style="{StaticResource RegularLabel}"/>
+                                        <Label Text="Phone: +91 93168 59248" Style="{StaticResource RegularLabel}"/>
+                                    </VerticalStackLayout>
+
+                                    <!-- Shipping To -->
+                                    <VerticalStackLayout Grid.Column="1">
+                                        <Label Text="SHIP TO:" Style="{StaticResource BoldLabel}"/>
+                                        <Label Text="{Binding Shipping.FullName}" Style="{StaticResource BoldLabel}" Margin="0,5,0,0"/>
+                                        <Label Text="{Binding Shipping.Add}" Style="{StaticResource RegularLabel}"/>
+                                        <Label Text="{Binding Shipping.ShippingAddress}" Style="{StaticResource RegularLabel}" />
+                                        <Label Text="{Binding Shipping.Phone}" Style="{StaticResource RegularLabel}"/>
+                                    </VerticalStackLayout>
+                                </Grid>
+
+                                <BoxView HeightRequest="2" Color="#2c3e50" Margin="0,10"/>
+
+                                <!-- Order Information -->
+                                <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto,Auto" Margin="0,10,0,0">
+                                    <VerticalStackLayout>
+                                        <Label Text="ORDER ID:" Style="{StaticResource BoldLabel}" HorizontalOptions="Start"/>
+                                        <Label Text="{Binding Id, StringFormat='#{0}'}" Style="{StaticResource RegularLabel}" Margin="0,5,0,0" HorizontalOptions="Start"/>
+                                    </VerticalStackLayout>
+
+                                    <VerticalStackLayout Grid.Column="1">
+                                        <Label Text="ORDER DATE" Style="{StaticResource BoldLabel}" HorizontalOptions="End"/>
+                                        <Label Text="{Binding DateCreated, StringFormat='{0:dd MMM yyyy}'}" Style="{StaticResource RegularLabel}" Margin="0,5,0,0" HorizontalOptions="End"/>
+                                    </VerticalStackLayout>
+
+                                    <VerticalStackLayout Grid.Row="1" Grid.ColumnSpan="2" Margin="0,10,0,0">
+                                        <Label Text="ITEMS IN SHIPMENT:" Style="{StaticResource BoldLabel}"/>
+                                        <CollectionView ItemsSource="{Binding LineItems}" Margin="0,5,0,0">
+                                            <CollectionView.ItemTemplate>
+                                                <DataTemplate>
+                                                    <Grid ColumnDefinitions="*,Auto">
+                                                        <Label Text="{Binding Name}" Style="{StaticResource RegularLabel}"/>
+                                                    </Grid>
+                                                </DataTemplate>
+                                            </CollectionView.ItemTemplate>
+                                        </CollectionView>
+                                    </VerticalStackLayout>
+
+                                    <Grid Grid.Row="2" Grid.ColumnSpan="2" ColumnDefinitions="*,*" Margin="0,15,0,0">
+                                        <!-- Payment Method Section -->
+                                        <VerticalStackLayout>
+                                            <Label Text="PAYMENT METHOD:" Style="{StaticResource BoldLabel}"/>
+                                            <Label Text="{Binding PaymentMethod, Converter={StaticResource ToUpperConverter}}" 
+                                                   Style="{StaticResource AmountLabel}" 
+                                                   VerticalTextAlignment="Center"/>
+                                        </VerticalStackLayout>
+
+                                        <!-- Total Amount Section -->
+                                        <VerticalStackLayout Grid.Column="1" HorizontalOptions="End">
+                                            <Label Text="TOTAL AMOUNT:" Style="{StaticResource BoldLabel}" 
+                                                   HorizontalOptions="End"/>
+                                            <Label Text="{Binding Total, StringFormat='₹{0:0}'}" 
+                                                   Style="{StaticResource AmountLabel}" 
+                                                   HorizontalOptions="Center"/>
+                                        </VerticalStackLayout>
+                                    </Grid>
+                                </Grid>
+                                <BoxView HeightRequest="2" Color="#2c3e50" Margin="0,10"/>
+
+                                <!-- QR Code Area -->
+                               
+
+                                <VerticalStackLayout HorizontalOptions="Center" Margin="0,10,0,0">
+                                    <Label Text="SCAN FOR DETAILS" Style="{StaticResource SmallLabel}" HorizontalOptions="Center"/>
+                                    <zxing:BarcodeGeneratorView 
+                                             Format="QrCode" 
+                                             Value="{Binding QrData}" 
+                                             WidthRequest="150" 
+                                             HeightRequest="150"/>
+                                    <Label Text="{Binding Id, StringFormat='Order ID: {0}'}" Style="{StaticResource SmallLabel}" 
+                                           HorizontalOptions="Center" Margin="0,5,0,0"/>
+                                </VerticalStackLayout>
+                            </VerticalStackLayout>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Print Button outside the border -->
+            <Button Text="PRINT LABEL" 
+                    x:Name="PrintButton"
+                    BackgroundColor="#2c3e50" 
+                    TextColor="White" 
+                    CornerRadius="5" 
+                    Margin="0,0,0,0" 
+                    HeightRequest="40"
+                    Clicked="OnPrintButtonClicked"
+                    HorizontalOptions="Fill"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

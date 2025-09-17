@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TWS.Views.HomePage"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="{DynamicResource PageBackgroundColor}"
+             Padding="0">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="PrimaryColor">#4A6FA5</Color>
+            <Color x:Key="SecondaryColor">#166D67</Color>
+            <Color x:Key="PageBackgroundColor">#F5F7FA</Color>
+            <Color x:Key="CardBackgroundColor">#FFFFFF</Color>
+            <Color x:Key="TextColor">#333333</Color>
+
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="{DynamicResource TextColor}" />
+                <Setter Property="FontFamily" Value="OpenSans-Regular" />
+            </Style>
+
+            <Style x:Key="HeaderLabel" TargetType="Label">
+                <Setter Property="FontSize" Value="28" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="Margin" Value="0,40,0,30" />
+            </Style>
+
+            <Style x:Key="CardView" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="{DynamicResource CardBackgroundColor}" />
+                <Setter Property="BorderColor" Value="#E1E5E9" />
+                <Setter Property="CornerRadius" Value="12" />
+                <Setter Property="HasShadow" Value="True" />
+                <Setter Property="Padding" Value="20" />
+            </Style>
+
+            <Style x:Key="OptionButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryColor}" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="CornerRadius" Value="10" />
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="HeightRequest" Value="50" />
+                <Setter Property="Margin" Value="0,15,0,0" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <StackLayout Spacing="20" Padding="0">
+
+            <!-- Header Section -->
+            <Label Text="WooCommerce Manager" Style="{StaticResource HeaderLabel}" />
+
+            <!-- Welcome Card -->
+            <Frame Style="{StaticResource CardView}" Margin="20,0,20,10">
+                <StackLayout Spacing="10">
+                    <Label Text="Welcome!" FontSize="22" FontAttributes="Bold" />
+                    <Label Text="Manage your WooCommerce orders efficiently. Use the options below to quickly generate labels or invoices for your customers." 
+                           FontSize="14"
+                           LineBreakMode="WordWrap"
+                           HorizontalTextAlignment="Start" />
+                </StackLayout>
+            </Frame>
+
+            <!-- Options Grid -->
+            <Grid ColumnSpacing="20" RowSpacing="20" Margin="20,0,20,30">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Generate Label Option -->
+                <Frame Style="{StaticResource CardView}" Grid.Column="0">
+                    <StackLayout HorizontalOptions="FillAndExpand" Spacing="12" VerticalOptions="FillAndExpand">
+                        <Image Source="shippinglabel.png" 
+                   HeightRequest="70" 
+                   HorizontalOptions="Center" 
+                   Aspect="AspectFit" />
+                        <Label Text="Generate Label" 
+                   FontSize="18" 
+                   FontAttributes="Bold" 
+                   HorizontalTextAlignment="Center" />
+                     
+                        <Button Text="Generate" 
+                    Style="{StaticResource OptionButton}"
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="OnGenerateLabelClicked" />
+                    </StackLayout>
+                </Frame>
+
+                <!-- Generate Invoice Option -->
+                <Frame Style="{StaticResource CardView}" Grid.Column="1">
+                    <StackLayout HorizontalOptions="FillAndExpand" Spacing="12" VerticalOptions="FillAndExpand">
+                        <Image Source="invoice.png" 
+                   HeightRequest="70" 
+                   HorizontalOptions="Center" 
+                   Aspect="AspectFit" />
+                        <Label Text="Generate Invoice" 
+                   FontSize="18" 
+                   FontAttributes="Bold" 
+                   HorizontalTextAlignment="Center" />
+                       
+                        <Button Text="Generate" 
+                    Style="{StaticResource OptionButton}"
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="OnGenerateInvoiceClicked" />
+                    </StackLayout>
+                </Frame>
+            </Grid>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

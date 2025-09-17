@@ -1,0 +1,302 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invoice - The Watch Studio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1e2a38;
+            --secondary: #c19b76;
+            --light-bg: #f8f9fa;
+            --border: #e0e0e0;
+            --text: #333;
+            --text-light: #6c757d;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            color: var(--text);
+            background: #fff;
+            line-height: 1.4;
+            padding: 5px;
+        }
+
+        .invoice-container {
+            max-width: 100%;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .invoice-header {
+            background-color: var(--primary);
+            color: #fff;
+            padding: 12px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            position: relative;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px; 
+            object-fit: contain; 
+            border-radius: 0;
+            margin-top : 8px
+        }
+
+
+        .company-info h1 {
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .company-info p {
+            font-size: 11px;
+            margin: 1px 0;
+        }
+
+        .invoice-title {
+            position: absolute;
+            top: 12px;
+            right: 15px;
+            text-align: right;
+        }
+
+            .invoice-title h2 {
+                font-size: 18px;
+                margin-bottom: 5px;
+                color: var(--secondary);
+            }
+
+        .invoice-id {
+            font-size: 11px;
+            padding: 3px 8px;
+            border-radius: 12px;
+            background: #fff;
+            color: var(--primary);
+            display: inline-block;
+            margin-bottom: 4px;
+        }
+
+        .status-badge {
+            font-size: 11px;
+            padding: 3px 8px;
+            border-radius: 12px;
+            background: #d4edda;
+            color: #155724;
+            display: inline-block;
+        }
+
+        .invoice-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 10px;
+            gap: 10px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .detail-group h3 {
+            font-size: 13px;
+            margin-bottom: 6px;
+            border-bottom: 1px solid var(--secondary);
+        }
+
+        .detail-item {
+            font-size: 11px;
+            margin: 3px 0;
+            display: flex; /* keep label and value in one line */
+            align-items: flex-start; /* align multiple lines at top */
+            gap: 5px;
+        }
+
+        .detail-label {
+            min-width: 35px; /* label will take at least this width */
+            font-weight: 500;
+            color: var(--text-light);
+            flex-shrink: 0;
+        }
+
+
+        .detail-value {
+            font-weight: 500;
+            flex: 1; /* take remaining space */
+            word-wrap: break-word; /* wrap long addresses */
+        }
+
+
+
+        .table-container {
+            padding: 0 10px;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 11px;
+            margin: 10px 0;
+        }
+
+        thead {
+            background: var(--primary);
+            color: #fff;
+        }
+
+        th, td {
+            padding: 6px;
+            text-align: left;
+        }
+
+            td.text-right, th.text-right {
+                text-align: right;
+            }
+
+        tbody tr:nth-child(even) {
+            background: var(--light-bg);
+        }
+
+        .summary {
+            display: grid;
+            grid-template-columns: 1fr;
+            padding: 0 10px 10px;
+            gap: 8px;
+        }
+
+        .notes, .totals {
+            background: var(--light-bg);
+            padding: 8px;
+            border-radius: 4px;
+            font-size: 11px;
+        }
+
+            .notes h4 {
+                font-size: 12px;
+                margin-bottom: 5px;
+            }
+
+        .total-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            margin-bottom: 4px;
+        }
+
+            .total-row:last-child {
+                font-weight: 700;
+                font-size: 12px;
+                border-top: 1px solid var(--border);
+                padding-top: 4px;
+            }
+
+        .invoice-footer {
+            background: var(--primary);
+            color: #fff;
+            text-align: center;
+            padding: 8px;
+            font-size: 11px;
+        }
+
+        .social-links {
+            margin-top: 4px;
+            display: flex;
+            justify-content: center;
+            gap: 6px;
+        }
+
+            .social-links a {
+                color: #fff;
+                font-size: 12px;
+            }
+    </style>
+</head>
+<body>
+    <div class="invoice-container">
+        <div class="invoice-header">
+            <div class="logo-container">
+                <div class="logo"><img src="logo.jpg"/></div>
+                <div class="company-info">
+                    <h1>THE WATCH STUDIO</h1>
+                    <p>Silkwala Market, Surat</p>
+                    <p><i class="fas fa-phone"></i> +91 93168 59248</p>
+                </div>
+            </div>
+            <div class="invoice-title">
+                <h2>INVOICE</h2>
+                <div class="invoice-id">INV{{INVOICE_NUMBER}}</div>
+                <!--<div class="status-badge"><i class="fas fa-check-circle"></i> Paid</div>-->
+            </div>
+        </div>
+
+        <div class="invoice-details">
+            <div class="detail-group">
+                <h3><i class="fas fa-user"></i> Bill To</h3>
+                <div class="detail-item"><span class="detail-label">Client:</span><span class="detail-value">{{CLIENT_NAME}}</span></div>
+                <div class="detail-item"><span class="detail-label">Add:</span><span class="detail-value">{{CLIENT_ADDRESS}} {{CLIENT_CITY}}</span></div>
+                <div class="detail-item"><span class="detail-label">Email:</span><span class="detail-value">{{CLIENT_EMAIL}}</span></div>
+                <div class="detail-item"><span class="detail-label">Phone:</span><span class="detail-value">{{CLIENT_PHONE}}</span></div>
+            </div>
+            <div class="detail-group">
+                <h3><i class="fas fa-file-invoice"></i> Invoice Details</h3>
+                <div class="detail-item"><span class="detail-label">Number:</span><span class="detail-value">INV{{INVOICE_NUMBER}}</span></div>
+                <div class="detail-item"><span class="detail-label">Date:</span><span class="detail-value">{{INVOICE_DATE}}</span></div>
+                <div class="detail-item"><span class="detail-label">Payment Method:</span><span class="detail-value">{{PAYMENT_METHOD}}</span></div>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th class="text-right">Qty</th>
+                        <th class="text-right">Price</th>
+                        <th class="text-right">Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{LINE_ITEMS}}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="summary">
+            <div class="notes">
+                <h4><i class="fas fa-sticky-note"></i> Notes</h4>
+                <p>Thank you for your business. Keep invoice for warranty claims.</p>
+            </div>
+            <div class="totals">
+                <div class="total-row"><span>Subtotal:</span><span>₹{{SUBTOTAL}}</span></div>
+                <div class="total-row"><span>Tax:</span><span>₹{{TAX_AMOUNT}}</span></div>
+                <div class="total-row"><span>Discount:</span><span>-₹{{DISCOUNT_AMOUNT}}</span></div>
+                <div class="total-row"><span>Paid:</span><span>-₹{{DISCOUNT_AMOUNT}}</span></div>
+                <div class="total-row"><span>Total:</span><span>{{TOTAL_AMOUNT}}</span></div>
+            </div>
+        </div>
+
+        <div class="invoice-footer">
+            <p>© 2025 The Watch Studio • www.thewatchstudio.in</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

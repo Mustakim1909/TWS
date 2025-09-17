@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:TWS.Models"
+             xmlns:converters="clr-namespace:TWS.Converters"
+             x:Class="TWS.Views.EditInvoicePage"
+             Title="Edit Invoice"
+             BackgroundColor="#F8F9FA">
+    
+    <ContentPage.Resources>
+        <converters:PriceConverter x:Key="PriceConverter" />
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="0" BindingContext="{Binding .}">
+
+            <!-- Order Summary Card -->
+            <Frame Margin="15,15" 
+                   CornerRadius="8" 
+                   BackgroundColor="White"
+                   BorderColor="#DDE1E6"
+                   HasShadow="True">
+                <VerticalStackLayout Spacing="12">
+                    <Label Text="Order Summary" 
+                           FontSize="16" 
+                           FontAttributes="Bold"
+                           TextColor="#4A6FA5"/>
+
+                    <BoxView HeightRequest="1" BackgroundColor="#E8EAED"/>
+
+                    <Grid ColumnDefinitions="Auto, *" RowDefinitions="Auto, Auto, Auto" 
+                          RowSpacing="8" ColumnSpacing="15">
+                        <Label Text="Order ID:" 
+                               Grid.Row="0" Grid.Column="0"
+                               TextColor="#5F6A76"
+                               FontSize="14"/>
+                        <Label x:Name="lblOrderId" 
+                               Text="{Binding Order.Id}"
+                               Grid.Row="0" Grid.Column="1"
+                               TextColor="#232F3E"
+                               FontSize="14"/>
+
+                        <Label Text="Status:" 
+                               Grid.Row="1" Grid.Column="0"
+                               TextColor="#5F6A76"
+                               FontSize="14"/>
+                        <Picker x:Name="pickerStatus" 
+                                SelectedItem="{Binding Order.Status}"
+                                Grid.Row="1" Grid.Column="1"
+                                Title="Select Status"
+                                TextColor="#232F3E"
+                                FontSize="14"/>
+
+                        <Label Text="Date Created:" 
+                               Grid.Row="2" Grid.Column="0"
+                               TextColor="#5F6A76"
+                               FontSize="14"/>
+                        <Label x:Name="lblDateCreated" 
+                               Text="{Binding Order.DateCreated, StringFormat='{0:g}'}"
+                               Grid.Row="2" Grid.Column="1"
+                               TextColor="#232F3E"
+                               FontSize="14"/>
+                    </Grid>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Shipping Address Card -->
+            <Frame Margin="15,0,15,15" 
+                   CornerRadius="8" 
+                   BackgroundColor="White"
+                   BorderColor="#DDE1E6"
+                   HasShadow="True">
+                <VerticalStackLayout Spacing="12">
+                    <Label Text="Shipping Address" 
+                           FontSize="16" 
+                           FontAttributes="Bold"
+                           TextColor="#4A6FA5"/>
+
+                    <BoxView HeightRequest="1" BackgroundColor="#E8EAED"/>
+
+                    <Grid ColumnDefinitions="*, *" RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto" 
+                          RowSpacing="10" ColumnSpacing="15">
+                        <!-- Row 0 -->
+                        <Entry x:Name="entryShippingFirstName" 
+                               Text="{Binding Order.Shipping.FirstName}"
+                               Placeholder="First Name"
+                               PlaceholderColor="#9BA5B2"
+                               TextColor="#232F3E"
+                               Grid.Row="0" Grid.Column="0"/>
+                        <Entry x:Name="entryShippingLastName" 
+                               Text="{Binding Order.Shipping.LastName}"
+                               Placeholder="Last Name"
+                               PlaceholderColor="#9BA5B2"
+                               TextColor="#232F3E"
+                               Grid.Row="0" Grid.Column="1"/>
+
+                        <!-- Row 1 -->
+                        <Entry x:Name="entryShippingCompany" 
+                               Text="{Binding Order.Shipping.Company}"
+                               Placeholder="Company"
+                               PlaceholderColor="#9BA5B2"
+                               TextColor="#232F3E"
+                               Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"/>
+
+                        <!-- Row 2 -->
+                        <Entry x:Name="entryShippingAddress1" 
+                               Text="{Binding Order.Shipping.Address1}"
+                               Placeholder="Address Line 1"
+                               PlaceholderColor="#9BA5B2"
+                               TextColor="#232F3E"
+                               Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"/>
+
+                        <!-- Row 3 -->
+                        <Entry x:Name="entryShippingAddress2" 
+                               Text="{Binding Order.Shipping.Address2}"
+                               Placeholder="Address Line 2"
+                               PlaceholderColor="#9BA5B2"
+                               TextColor="#232F3E"
+                               Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"/>
+
+                        <!-- Row 4 -->
+                        <Entry x:Name="entryShippingCity" 
+                               Text="{Binding Order.Shipping.City}"
+                               Placeholder="City"
+                               PlaceholderColor="#9BA5B2"
+                               TextColor="#232F3E"
+                               Grid.Row="4" Grid.Column="0"/>
+                        <Entry x:Name="entryShippingPostcode" 
+                               Text="{Binding Order.Shipping.Postcode}"
+                               Placeholder="Postcode"
+                               PlaceholderColor="#9BA5B2"
+                               TextColor="#232F3E"
+                               Keyboard="Numeric"
+                               Grid.Row="4" Grid.Column="1"/>
+
+                        <!-- Row 5 -->
+                        <Entry x:Name="entryShippingState" 
+                               Text="{Binding Order.Shipping.State}"
+                               Placeholder="State"
+                               PlaceholderColor="#9BA5B2"
+                               TextColor="#232F3E"
+                               Grid.Row="5" Grid.Column="0"/>
+                        <Entry x:Name="entryShippingCountry" 
+                               Text="{Binding Order.Shipping.Country}"
+                               Placeholder="Country"
+                               PlaceholderColor="#9BA5B2"
+                               TextColor="#232F3E"
+                               Grid.Row="5" Grid.Column="1"/>
+
+                        <!-- Row 6 -->
+                        <Entry x:Name="entryShippingEmail" 
+                               Text="{Binding Order.Billing.Email}"
+                               Placeholder="Email"
+                               PlaceholderColor="#9BA5B2"
+                               TextColor="#232F3E"
+                               Keyboard="Email"
+                               Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2"/>
+
+                        <!-- Row 7 -->
+                        <Entry x:Name="entryShippingPhone" 
+                               Text="{Binding Order.Shipping.Phone}"
+                               Placeholder="Phone"
+                               PlaceholderColor="#9BA5B2"
+                               TextColor="#232F3E"
+                               Keyboard="Telephone"
+                               Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2"/>
+                    </Grid>
+                </VerticalStackLayout>
+            </Frame>
+            <!-- Pricing Card -->
+            <Frame Margin="15,0,15,15" 
+                   CornerRadius="8" 
+                   BackgroundColor="White"
+                   BorderColor="#DDE1E6"
+                   HasShadow="True">
+                <VerticalStackLayout Spacing="12">
+                    <Label Text="Pricing Details" 
+                           FontSize="16" 
+                           FontAttributes="Bold"
+                           TextColor="#4A6FA5"/>
+                    <BoxView HeightRequest="1" BackgroundColor="#E8EAED"/>
+
+                    <Grid ColumnDefinitions="*, Auto" RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto" 
+                          RowSpacing="10">
+                        <Label Text="Subtotal:" 
+                               Grid.Row="0" Grid.Column="0"
+                               TextColor="#5F6A76"
+                               FontSize="14"/>
+                        <Entry x:Name="entrySubtotal" 
+                               Text="{Binding Order.Total, StringFormat='₹{0:F2}'}"
+                               Keyboard="Numeric"
+                               TextColor="#232F3E"
+                               HorizontalTextAlignment="End"
+                               Grid.Row="0" Grid.Column="1"/>
+
+                        <Label Text="Shipping:" 
+                               Grid.Row="1" Grid.Column="0"
+                               TextColor="#5F6A76"
+                               FontSize="14"/>
+                        <Entry x:Name="entryShippingTotal" 
+                               Text="{Binding Order.ShippingTotal, StringFormat='₹{0:F2}'}"
+                               Keyboard="Numeric"
+                               TextColor="#232F3E"
+                               HorizontalTextAlignment="End"
+                               Grid.Row="1" Grid.Column="1"/>
+
+                        <Label Text="Tax:" 
+                               Grid.Row="2" Grid.Column="0"
+                               TextColor="#5F6A76"
+                               FontSize="14"/>
+                        <Entry x:Name="entryTotalTax" 
+                               Text="{Binding Order.TotalTax, StringFormat='₹{0:F2}'}"
+                               Keyboard="Numeric"
+                               TextColor="#232F3E"
+                               HorizontalTextAlignment="End"
+                               Grid.Row="2" Grid.Column="1"/>
+
+                        <Label Text="Discount:" 
+                               Grid.Row="3" Grid.Column="0"
+                               TextColor="#FF0000"
+                               FontSize="14"/>
+                        <Entry x:Name="entryTotalDiscount" 
+                               Text="{Binding Order.TotalDiscount, StringFormat='₹{0:F2}'}"
+                               Keyboard="Numeric"
+                               TextColor="#FF0000"
+                               HorizontalTextAlignment="End"
+                               Grid.Row="3" Grid.Column="1"/>
+
+                        <BoxView HeightRequest="1" BackgroundColor="#E8EAED"
+                                 Grid.Row="4" Grid.ColumnSpan="2"/>
+
+                        <Label Text="Total:" 
+                               Grid.Row="5" Grid.Column="0"
+                               TextColor="#232F3E"
+                               FontSize="16"
+                               FontAttributes="Bold"/>
+                        <Label Text="{Binding Order.Total, StringFormat='₹{0:F2}'}" 
+                               Grid.Row="5" Grid.Column="1"
+                               TextColor="#232F3E"
+                               FontSize="16"
+                               FontAttributes="Bold"
+                               HorizontalTextAlignment="End"/>
+                    </Grid>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Line Items Card -->
+            <Frame Margin="15,0,15,15" 
+                   CornerRadius="8" 
+                   BackgroundColor="White"
+                   BorderColor="#DDE1E6"
+                   HasShadow="True">
+                <VerticalStackLayout Spacing="12">
+                    <Grid ColumnDefinitions="*, Auto">
+                        <Label Text="Order Items" 
+                               FontSize="16" 
+                               FontAttributes="Bold"
+                               TextColor="#4A6FA5"/>
+                        <Button Text="Add Item" 
+                                Clicked="OnAddLineItemClicked"
+                                BackgroundColor="Transparent"
+                                TextColor="#147CDB"
+                                BorderColor="#147CDB"
+                                BorderWidth="1"
+                                CornerRadius="4"
+     
+                                FontSize="12"
+                                Grid.Column="1"/>
+                    </Grid>
+
+                    <BoxView HeightRequest="1" BackgroundColor="#E8EAED"/>
+
+                    <CollectionView x:Name="lineItemsCollection" 
+                        ItemsSource="{Binding LineItems}">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate x:DataType="models:LineItem">
+                                <Frame Margin="0,8" Padding="10"
+                           CornerRadius="8"
+                           BackgroundColor="White"
+                           BorderColor="#E8EAED"
+                           HasShadow="True">
+                                    <Grid ColumnDefinitions="*, Auto, Auto"
+                              RowDefinitions="Auto, Auto"
+                              ColumnSpacing="10"
+                              RowSpacing="6">
+
+                                        <!-- Product Name -->
+                                        <Entry Text="{Binding Name}" 
+                                   Placeholder="Product Name"
+                                   FontSize="15"
+                                   TextColor="#232F3E"
+                                   Grid.Row="0"
+                                   Grid.Column="0"/>
+
+                                        <!-- Total -->
+                                        <Label Text="{Binding Total, StringFormat='₹{0:F2}'}"
+                                   FontSize="15"
+                                   FontAttributes="Bold"
+                                   TextColor="#232F3E"
+                                   Grid.Row="0"
+                                   Grid.Column="1"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="End"/>
+
+                                        <!-- Delete Button -->
+                                        <ImageButton Source="delete.png"
+                                         HeightRequest="24"
+                                         WidthRequest="24"
+                                         BackgroundColor="Transparent"
+                                         Grid.Row="0"
+                                         Grid.Column="2"
+                                         HorizontalOptions="End"
+                                         VerticalOptions="Center"
+                                         CommandParameter="{Binding .}"
+                                         Clicked="OnRemoveLineItemClicked"/>
+
+                                        <!-- Price -->
+                                        <Entry Text="{Binding Price, Converter={StaticResource PriceConverter}, Mode=TwoWay}" 
+                                   Placeholder="Price"
+                                   Keyboard="Numeric"
+                                   FontSize="13"
+                                   TextColor="#232F3E"
+                                   Grid.Row="1"
+                                   Grid.Column="0"/>
+
+                                        <!-- Qty -->
+                                        <StackLayout Orientation="Horizontal"
+                                         Spacing="5"
+                                         Grid.Row="1"
+                                         Grid.Column="1"
+                                         VerticalOptions="Center">
+                                            <Label Text="Qty:" 
+                                       FontSize="13"
+                                       TextColor="#5F6A76"
+                                       VerticalOptions="Center"/>
+                                            <Entry Text="{Binding Quantity}" 
+                                       WidthRequest="50"
+                                       Keyboard="Numeric"
+                                       TextColor="#232F3E"
+                                       HorizontalTextAlignment="Center"
+                                       VerticalOptions="Center"/>
+                                        </StackLayout>
+
+                                    </Grid>
+                                </Frame>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Custom Fields Card -->
+            <Frame Margin="15,0,15,15" 
+       CornerRadius="8" 
+       BackgroundColor="White"
+       BorderColor="#DDE1E6"
+       HasShadow="True">
+                <VerticalStackLayout Spacing="12">
+                    <Label Text="Advance Payment" 
+               FontSize="16" 
+               FontAttributes="Bold"
+               TextColor="#4A6FA5"/>
+
+                    <BoxView HeightRequest="1" BackgroundColor="#E8EAED"/>
+
+                    <CollectionView x:Name="customFieldsCollection"
+                ItemsSource="{Binding VisibleCustomFields}">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Frame Margin="0,5"
+                   Padding="12"
+                   CornerRadius="6"
+                   BackgroundColor="#F8F9FA"
+                   BorderColor="#E8EAED">
+                                    <Grid ColumnDefinitions="*, Auto"
+                      RowDefinitions="Auto, Auto">
+                                       
+                                        <Entry Text="{Binding Value}"
+                           Placeholder="Value"
+                           PlaceholderColor="#9BA5B2"
+                           TextColor="#232F3E"
+                           Grid.Row="1" Grid.Column="0"/>
+                                        <ImageButton Source="delete_icon.png"
+                                 BackgroundColor="Transparent"
+                                 HeightRequest="20"
+                                 WidthRequest="20"
+                                 Grid.Row="0" Grid.Column="1" Grid.RowSpan="2"
+                                 VerticalOptions="Center"
+                                 Clicked="OnRemoveCustomFieldClicked"
+                                 CommandParameter="{Binding .}"/>
+                                    </Grid>
+                                </Frame>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+
+
+                </VerticalStackLayout>
+            </Frame>
+
+
+            <!-- Action Buttons -->
+            <Grid ColumnDefinitions="*, *" 
+                  ColumnSpacing="15" 
+                  Margin="15,10,15,20"
+                  VerticalOptions="End">
+                <Button x:Name="btnCancel" 
+                        Text="Cancel" 
+                        Clicked="OnCancelClicked" 
+                        BackgroundColor="White"
+                        TextColor="#5F6A76"
+                        BorderColor="#DDE1E6"
+                        BorderWidth="1"
+                        CornerRadius="8"
+                        HeightRequest="45"
+                        FontAttributes="Bold"
+                        Grid.Column="0"/>
+                <Button x:Name="btnUpdate" 
+                        Text="Update Order" 
+                        Clicked="OnUpdateClicked" 
+                        BackgroundColor="#4A6FA5"
+                        TextColor="White"
+                        CornerRadius="8"
+                        HeightRequest="45"
+                        FontAttributes="Bold"
+                        Grid.Column="1"/>
+            </Grid>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,654 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Admin\\source\\repos\\TWS\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|c:\\users\\admin\\source\\repos\\tws\\tws\\views\\labelpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|solutionrelative:tws\\views\\labelpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|c:\\users\\admin\\source\\repos\\tws\\tws\\views\\homepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|solutionrelative:tws\\views\\homepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|c:\\users\\admin\\source\\repos\\tws\\tws\\views\\homepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|solutionrelative:tws\\views\\homepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|c:\\users\\admin\\source\\repos\\tws\\tws\\views\\customerdetailpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|solutionrelative:tws\\views\\customerdetailpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|c:\\users\\admin\\source\\repos\\tws\\tws\\viewmodels\\customerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|solutionrelative:tws\\viewmodels\\customerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|c:\\users\\admin\\source\\repos\\tws\\tws\\views\\customerdetailpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|solutionrelative:tws\\views\\customerdetailpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|c:\\users\\admin\\source\\repos\\tws\\tws\\views\\editinvoicepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|solutionrelative:tws\\views\\editinvoicepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|c:\\users\\admin\\source\\repos\\tws\\tws\\views\\labeleditpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|solutionrelative:tws\\views\\labeleditpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|c:\\users\\admin\\source\\repos\\tws\\tws\\views\\invoicepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|solutionrelative:tws\\views\\invoicepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|c:\\users\\admin\\source\\repos\\tws\\tws\\views\\labeleditpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|solutionrelative:tws\\views\\labeleditpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|c:\\users\\admin\\source\\repos\\tws\\tws\\views\\editinvoicepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|solutionrelative:tws\\views\\editinvoicepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|c:\\users\\admin\\source\\repos\\tws\\tws\\views\\invoicepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|solutionrelative:tws\\views\\invoicepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|c:\\users\\admin\\source\\repos\\tws\\tws\\resources\\styles\\colors.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|solutionrelative:tws\\resources\\styles\\colors.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|c:\\users\\admin\\source\\repos\\tws\\tws\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|solutionrelative:tws\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|c:\\users\\admin\\source\\repos\\tws\\tws\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|solutionrelative:tws\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|c:\\users\\admin\\source\\repos\\tws\\tws\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|solutionrelative:tws\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|c:\\users\\admin\\source\\repos\\tws\\tws\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|solutionrelative:tws\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|c:\\users\\admin\\source\\repos\\tws\\tws\\services\\pdfservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|solutionrelative:tws\\services\\pdfservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|c:\\users\\admin\\source\\repos\\tws\\tws\\views\\labelpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|solutionrelative:tws\\views\\labelpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|c:\\users\\admin\\source\\repos\\tws\\tws\\viewmodels\\labelviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|solutionrelative:tws\\viewmodels\\labelviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|c:\\users\\admin\\source\\repos\\tws\\tws\\interfaces\\ipdfservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|solutionrelative:tws\\interfaces\\ipdfservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|c:\\users\\admin\\source\\repos\\tws\\tws\\resources\\templates\\invoice.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|solutionrelative:tws\\resources\\templates\\invoice.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|c:\\users\\admin\\source\\repos\\tws\\tws\\services\\woocommerceservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|solutionrelative:tws\\services\\woocommerceservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|c:\\users\\admin\\source\\repos\\tws\\tws\\converters\\priceconverter .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|solutionrelative:tws\\converters\\priceconverter .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|c:\\users\\admin\\source\\repos\\tws\\tws\\interfaces\\iwoocommerceservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|solutionrelative:tws\\interfaces\\iwoocommerceservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|c:\\users\\admin\\source\\repos\\tws\\tws\\viewmodels\\invoiceviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|solutionrelative:tws\\viewmodels\\invoiceviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|c:\\users\\admin\\source\\repos\\tws\\tws\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|solutionrelative:tws\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\.nuget\\packages\\microsoft.maui.resizetizer\\8.0.100\\buildTransitive\\Microsoft.Maui.Resizetizer.After.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|c:\\users\\admin\\source\\repos\\tws\\tws\\tws.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|solutionrelative:tws\\tws.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|c:\\users\\admin\\source\\repos\\tws\\tws\\viewmodels\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|solutionrelative:tws\\viewmodels\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|c:\\users\\admin\\source\\repos\\tws\\tws\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|solutionrelative:tws\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|c:\\users\\admin\\source\\repos\\tws\\tws\\models\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|solutionrelative:tws\\models\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|c:\\users\\admin\\source\\repos\\tws\\tws\\views\\editinvoice.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|solutionrelative:tws\\views\\editinvoice.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|c:\\users\\admin\\source\\repos\\tws\\tws\\models\\ordercustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|solutionrelative:tws\\models\\ordercustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|c:\\users\\admin\\source\\repos\\tws\\tws\\models\\appsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|solutionrelative:tws\\models\\appsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|c:\\users\\admin\\source\\repos\\tws\\tws\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|solutionrelative:tws\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|c:\\users\\admin\\source\\repos\\tws\\tws\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|solutionrelative:tws\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|c:\\users\\admin\\source\\repos\\tws\\tws\\models\\invoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D793F74F-9349-4E8C-AA2E-680FE9C7CEC3}|TWS\\TWS.csproj|solutionrelative:tws\\models\\invoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 20,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\appsettings.json",
+              "RelativeDocumentMoniker": "TWS\\appsettings.json",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\appsettings.json",
+              "RelativeToolTip": "TWS\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-12T09:01:26.215Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Colors.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\Resources\\Styles\\Colors.xaml",
+              "RelativeDocumentMoniker": "TWS\\Resources\\Styles\\Colors.xaml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\Resources\\Styles\\Colors.xaml",
+              "RelativeToolTip": "TWS\\Resources\\Styles\\Colors.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-09-17T09:51:05.518Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "PriceConverter .cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\Converters\\PriceConverter .cs",
+              "RelativeDocumentMoniker": "TWS\\Converters\\PriceConverter .cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\Converters\\PriceConverter .cs",
+              "RelativeToolTip": "TWS\\Converters\\PriceConverter .cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T06:14:14.831Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "EditInvoicePage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\Views\\EditInvoicePage.xaml.cs",
+              "RelativeDocumentMoniker": "TWS\\Views\\EditInvoicePage.xaml.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\Views\\EditInvoicePage.xaml.cs",
+              "RelativeToolTip": "TWS\\Views\\EditInvoicePage.xaml.cs",
+              "ViewState": "AgIAAL8AAAAAAAAAAAAAAM4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-15T07:24:28.826Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EditInvoicePage.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\Views\\EditInvoicePage.xaml",
+              "RelativeDocumentMoniker": "TWS\\Views\\EditInvoicePage.xaml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\Views\\EditInvoicePage.xaml",
+              "RelativeToolTip": "TWS\\Views\\EditInvoicePage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-09-15T07:24:10.248Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "EditInvoice.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\Views\\EditInvoice.xaml",
+              "RelativeDocumentMoniker": "TWS\\Views\\EditInvoice.xaml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\Views\\EditInvoice.xaml",
+              "RelativeToolTip": "TWS\\Views\\EditInvoice.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-09-15T07:22:41.044Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "InvoicePage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\Views\\InvoicePage.xaml.cs",
+              "RelativeDocumentMoniker": "TWS\\Views\\InvoicePage.xaml.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\Views\\InvoicePage.xaml.cs",
+              "RelativeToolTip": "TWS\\Views\\InvoicePage.xaml.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-15T03:36:47.482Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Invoice.html",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\Resources\\Templates\\Invoice.html",
+              "RelativeDocumentMoniker": "TWS\\Resources\\Templates\\Invoice.html",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\Resources\\Templates\\Invoice.html",
+              "RelativeToolTip": "TWS\\Resources\\Templates\\Invoice.html",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAYwI4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-09-15T03:27:15.953Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "InvoiceViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\ViewModels\\InvoiceViewModel.cs",
+              "RelativeDocumentMoniker": "TWS\\ViewModels\\InvoiceViewModel.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\ViewModels\\InvoiceViewModel.cs",
+              "RelativeToolTip": "TWS\\ViewModels\\InvoiceViewModel.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAADwv08AAACjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-15T03:26:25.448Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Invoice.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\Models\\Invoice.cs",
+              "RelativeDocumentMoniker": "TWS\\Models\\Invoice.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\Models\\Invoice.cs",
+              "RelativeToolTip": "TWS\\Models\\Invoice.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-15T02:48:34.438Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "InvoicePage.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\Views\\InvoicePage.xaml",
+              "RelativeDocumentMoniker": "TWS\\Views\\InvoicePage.xaml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\Views\\InvoicePage.xaml",
+              "RelativeToolTip": "TWS\\Views\\InvoicePage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-09-15T02:44:21.32Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "TWS.csproj",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\TWS.csproj",
+              "RelativeDocumentMoniker": "TWS\\TWS.csproj",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\TWS.csproj",
+              "RelativeToolTip": "TWS\\TWS.csproj",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAYwGgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-13T11:46:04.117Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "PdfService.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\Services\\PdfService.cs",
+              "RelativeDocumentMoniker": "TWS\\Services\\PdfService.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\Services\\PdfService.cs",
+              "RelativeToolTip": "TWS\\Services\\PdfService.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAABoAAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-13T11:08:22.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "IPdfService.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\Interfaces\\IPdfService.cs",
+              "RelativeDocumentMoniker": "TWS\\Interfaces\\IPdfService.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\Interfaces\\IPdfService.cs",
+              "RelativeToolTip": "TWS\\Interfaces\\IPdfService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-13T11:07:02.249Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LabelEditPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\Views\\LabelEditPage.xaml.cs",
+              "RelativeDocumentMoniker": "TWS\\Views\\LabelEditPage.xaml.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\Views\\LabelEditPage.xaml.cs",
+              "RelativeToolTip": "TWS\\Views\\LabelEditPage.xaml.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAwwGUAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-13T07:56:15.005Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LabelEditPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\Views\\LabelEditPage.xaml",
+              "RelativeDocumentMoniker": "TWS\\Views\\LabelEditPage.xaml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\Views\\LabelEditPage.xaml",
+              "RelativeToolTip": "TWS\\Views\\LabelEditPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIIAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-09-13T07:55:24.766Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "OrderCustomer.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\Models\\OrderCustomer.cs",
+              "RelativeDocumentMoniker": "TWS\\Models\\OrderCustomer.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\Models\\OrderCustomer.cs",
+              "RelativeToolTip": "TWS\\Models\\OrderCustomer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-13T04:48:57.895Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "TWS\\Models\\Order.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\Models\\Order.cs",
+              "RelativeToolTip": "TWS\\Models\\Order.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAkwO8AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-13T03:54:39.922Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "LabelPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\Views\\LabelPage.xaml.cs",
+              "RelativeDocumentMoniker": "TWS\\Views\\LabelPage.xaml.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\Views\\LabelPage.xaml.cs",
+              "RelativeToolTip": "TWS\\Views\\LabelPage.xaml.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAgwF8AAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-13T03:27:33.532Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "LabelViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\ViewModels\\LabelViewModel.cs",
+              "RelativeDocumentMoniker": "TWS\\ViewModels\\LabelViewModel.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\ViewModels\\LabelViewModel.cs",
+              "RelativeToolTip": "TWS\\ViewModels\\LabelViewModel.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAUwHoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-13T03:10:37.512Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LabelPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\Views\\LabelPage.xaml",
+              "RelativeDocumentMoniker": "TWS\\Views\\LabelPage.xaml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\Views\\LabelPage.xaml",
+              "RelativeToolTip": "TWS\\Views\\LabelPage.xaml",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAYwJgAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-09-13T03:05:22.179Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomePage.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\Views\\HomePage.xaml",
+              "RelativeDocumentMoniker": "TWS\\Views\\HomePage.xaml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\Views\\HomePage.xaml",
+              "RelativeToolTip": "TWS\\Views\\HomePage.xaml",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAAAAYAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-09-13T02:53:55.462Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "AppSettings.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\Models\\AppSettings.cs",
+              "RelativeDocumentMoniker": "TWS\\Models\\AppSettings.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\Models\\AppSettings.cs",
+              "RelativeToolTip": "TWS\\Models\\AppSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T10:37:30.955Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "BaseViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\ViewModels\\BaseViewModel.cs",
+              "RelativeDocumentMoniker": "TWS\\ViewModels\\BaseViewModel.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\ViewModels\\BaseViewModel.cs",
+              "RelativeToolTip": "TWS\\ViewModels\\BaseViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T10:21:34.211Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CustomerDetailPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\Views\\CustomerDetailPage.xaml.cs",
+              "RelativeDocumentMoniker": "TWS\\Views\\CustomerDetailPage.xaml.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\Views\\CustomerDetailPage.xaml.cs",
+              "RelativeToolTip": "TWS\\Views\\CustomerDetailPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T10:03:55.614Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CustomerViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\ViewModels\\CustomerViewModel.cs",
+              "RelativeDocumentMoniker": "TWS\\ViewModels\\CustomerViewModel.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\ViewModels\\CustomerViewModel.cs",
+              "RelativeToolTip": "TWS\\ViewModels\\CustomerViewModel.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAJoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T09:55:25.887Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CustomerDetailPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\Views\\CustomerDetailPage.xaml",
+              "RelativeDocumentMoniker": "TWS\\Views\\CustomerDetailPage.xaml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\Views\\CustomerDetailPage.xaml",
+              "RelativeToolTip": "TWS\\Views\\CustomerDetailPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF4AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-09-12T09:52:59.404Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Address.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\Models\\Address.cs",
+              "RelativeDocumentMoniker": "TWS\\Models\\Address.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\Models\\Address.cs",
+              "RelativeToolTip": "TWS\\Models\\Address.cs",
+              "ViewState": "AgIAAIIAAAAAAAAAAAAswLAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T09:40:27.279Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\Models\\Customer.cs",
+              "RelativeDocumentMoniker": "TWS\\Models\\Customer.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\Models\\Customer.cs",
+              "RelativeToolTip": "TWS\\Models\\Customer.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAAwFYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T09:40:07.147Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "WoocommerceServices.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\Services\\WoocommerceServices.cs",
+              "RelativeDocumentMoniker": "TWS\\Services\\WoocommerceServices.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\Services\\WoocommerceServices.cs",
+              "RelativeToolTip": "TWS\\Services\\WoocommerceServices.cs",
+              "ViewState": "AgIAAAcBAAAAAAAAAAAawEgBAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T09:34:20.066Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "IWoocommerceServices.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\Interfaces\\IWoocommerceServices.cs",
+              "RelativeDocumentMoniker": "TWS\\Interfaces\\IWoocommerceServices.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\Interfaces\\IWoocommerceServices.cs",
+              "RelativeToolTip": "TWS\\Interfaces\\IWoocommerceServices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA8AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T09:32:10.374Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\App.xaml",
+              "RelativeDocumentMoniker": "TWS\\App.xaml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\App.xaml",
+              "RelativeToolTip": "TWS\\App.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-09-12T09:23:47.019Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Microsoft.Maui.Resizetizer.After.targets",
+              "DocumentMoniker": "C:\\Users\\Admin\\.nuget\\packages\\microsoft.maui.resizetizer\\8.0.100\\buildTransitive\\Microsoft.Maui.Resizetizer.After.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\.nuget\\packages\\microsoft.maui.resizetizer\\8.0.100\\buildTransitive\\Microsoft.Maui.Resizetizer.After.targets",
+              "ToolTip": "C:\\Users\\Admin\\.nuget\\packages\\microsoft.maui.resizetizer\\8.0.100\\buildTransitive\\Microsoft.Maui.Resizetizer.After.targets",
+              "RelativeToolTip": "..\\..\\..\\.nuget\\packages\\microsoft.maui.resizetizer\\8.0.100\\buildTransitive\\Microsoft.Maui.Resizetizer.After.targets",
+              "ViewState": "AgIAAFYCAAAAAAAAAAAYwHkCAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2025-09-12T09:23:06.937Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\App.xaml.cs",
+              "RelativeDocumentMoniker": "TWS\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\App.xaml.cs",
+              "RelativeToolTip": "TWS\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T09:18:41.731Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "AppShell.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\AppShell.xaml.cs",
+              "RelativeDocumentMoniker": "TWS\\AppShell.xaml.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\AppShell.xaml.cs",
+              "RelativeToolTip": "TWS\\AppShell.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T09:18:01.204Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AppShell.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\AppShell.xaml",
+              "RelativeDocumentMoniker": "TWS\\AppShell.xaml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\AppShell.xaml",
+              "RelativeToolTip": "TWS\\AppShell.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-09-12T09:17:01.066Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HomePage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\Views\\HomePage.xaml.cs",
+              "RelativeDocumentMoniker": "TWS\\Views\\HomePage.xaml.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\Views\\HomePage.xaml.cs",
+              "RelativeToolTip": "TWS\\Views\\HomePage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T09:16:04.119Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "MauiProgram.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\MauiProgram.cs",
+              "RelativeDocumentMoniker": "TWS\\MauiProgram.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\TWS\\TWS\\MauiProgram.cs",
+              "RelativeToolTip": "TWS\\MauiProgram.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAqwC0AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T09:08:26.163Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
