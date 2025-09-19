@@ -4,6 +4,7 @@
              xmlns:models="clr-namespace:TWS.Models"
              xmlns:converters="clr-namespace:TWS.Converters"
              x:Class="TWS.Views.EditInvoicePage"
+             x:Name="ContentPage"
              Title="Edit Invoice"
              BackgroundColor="#F8F9FA">
     
@@ -16,50 +17,35 @@
 
             <!-- Order Summary Card -->
             <Frame Margin="15,15" 
-                   CornerRadius="8" 
-                   BackgroundColor="White"
-                   BorderColor="#DDE1E6"
-                   HasShadow="True">
+       CornerRadius="8" 
+       BackgroundColor="White"
+       BorderColor="#DDE1E6"
+       HasShadow="True">
                 <VerticalStackLayout Spacing="12">
                     <Label Text="Order Summary" 
-                           FontSize="16" 
-                           FontAttributes="Bold"
-                           TextColor="#4A6FA5"/>
+               FontSize="16" 
+               FontAttributes="Bold"
+               TextColor="#4A6FA5"/>
 
                     <BoxView HeightRequest="1" BackgroundColor="#E8EAED"/>
 
-                    <Grid ColumnDefinitions="Auto, *" RowDefinitions="Auto, Auto, Auto" 
-                          RowSpacing="8" ColumnSpacing="15">
-                        <Label Text="Order ID:" 
-                               Grid.Row="0" Grid.Column="0"
-                               TextColor="#5F6A76"
-                               FontSize="14"/>
-                        <Label x:Name="lblOrderId" 
-                               Text="{Binding Order.Id}"
-                               Grid.Row="0" Grid.Column="1"
-                               TextColor="#232F3E"
-                               FontSize="14"/>
+                    <Grid ColumnDefinitions="Auto, *" RowDefinitions="Auto, Auto, Auto, Auto" 
+              RowSpacing="8" ColumnSpacing="15">
+                        <!-- Order ID -->
+                        <Label Text="Order ID:" Grid.Row="0" Grid.Column="0" TextColor="#5F6A76" FontSize="14"/>
+                        <Entry x:Name="lblOrderId" Text="{Binding Order.Id}" Grid.Row="0" Grid.Column="1" TextColor="#232F3E" FontSize="14"/>
 
-                        <Label Text="Status:" 
-                               Grid.Row="1" Grid.Column="0"
-                               TextColor="#5F6A76"
-                               FontSize="14"/>
-                        <Picker x:Name="pickerStatus" 
-                                SelectedItem="{Binding Order.Status}"
-                                Grid.Row="1" Grid.Column="1"
-                                Title="Select Status"
-                                TextColor="#232F3E"
-                                FontSize="14"/>
+                        <!-- Status -->
+                        <Label Text="Status:" Grid.Row="1" Grid.Column="0" TextColor="#5F6A76" FontSize="14"/>
+                        <Picker x:Name="pickerStatus" SelectedItem="{Binding Order.Status}" Grid.Row="1" Grid.Column="1" Title="Select Status" TextColor="#232F3E" FontSize="14"/>
 
-                        <Label Text="Date Created:" 
-                               Grid.Row="2" Grid.Column="0"
-                               TextColor="#5F6A76"
-                               FontSize="14"/>
-                        <Label x:Name="lblDateCreated" 
-                               Text="{Binding Order.DateCreated, StringFormat='{0:g}'}"
-                               Grid.Row="2" Grid.Column="1"
-                               TextColor="#232F3E"
-                               FontSize="14"/>
+                        <!-- Payment Method -->
+                        <Label Text="Payment Method:" Grid.Row="2" Grid.Column="0" TextColor="#5F6A76" FontSize="14"/>
+                        <Entry x:Name="entryPaymentMethod" Text="{Binding Order.PaymentMethod}" Grid.Row="2" Grid.Column="1" TextColor="#232F3E" FontSize="14"/>
+
+                        <!-- Date Created -->
+                        <Label Text="Date Created:" Grid.Row="3" Grid.Column="0" TextColor="#5F6A76" FontSize="14"/>
+                        <Label x:Name="lblDateCreated" Text="{Binding Order.DateCreated, StringFormat='{0:g}'}" Grid.Row="3" Grid.Column="1" TextColor="#232F3E" FontSize="14"/>
                     </Grid>
                 </VerticalStackLayout>
             </Frame>

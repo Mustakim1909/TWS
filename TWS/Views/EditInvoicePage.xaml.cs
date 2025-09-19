@@ -2,6 +2,7 @@ using System.Collections.ObjectModel;
 using TWS.Converters;
 using TWS.Interfaces;
 using TWS.Models;
+using TWS.Services;
 
 namespace TWS.Views;
 
@@ -14,6 +15,7 @@ public partial class EditInvoicePage : ContentPage
     }
 
     private readonly IWoocommerceServices _wooCommerceService;
+    private readonly IPdfService _pdfService;
 
     public Order Order { get; set; }
     public ObservableCollection<CustomField> CustomFields { get; set; }
@@ -24,7 +26,7 @@ public partial class EditInvoicePage : ContentPage
         InitializeComponent();
         _wooCommerceService = wooCommerceService;
         Order = order;
-
+        _pdfService = new PdfService();
         CustomFields = new ObservableCollection<CustomField>();
         LineItems = new ObservableCollection<LineItem>(order.LineItems);
 
@@ -40,7 +42,16 @@ public partial class EditInvoicePage : ContentPage
     {
         lblOrderId.Text = Order.Id.ToString();
         lblDateCreated.Text = Order.DateCreated.ToString("g");
-
+        if (LineItems.Count != 0)
+        {
+            btnUpdate.Text = "Update Order";
+        }
+        else
+        {
+            btnUpdate.Text = "View Invoice";
+            Order.Status = "processing";
+            ContentPage.Title = "Create Invoice";
+        }
         pickerStatus.Items.Add("pending");
         pickerStatus.Items.Add("processing");
         pickerStatus.Items.Add("on-hold");
@@ -51,7 +62,7 @@ public partial class EditInvoicePage : ContentPage
 
         var statusIndex = pickerStatus.Items.IndexOf(Order.Status);
         pickerStatus.SelectedIndex = statusIndex >= 0 ? statusIndex : 1;
-
+        
         LoadCustomFields();
     }
 
@@ -99,22 +110,40 @@ public partial class EditInvoicePage : ContentPage
     private void OnAddLineItemClicked(object sender, EventArgs e)
     {
         LineItem lineItems = new LineItem();
-        var firstlineitem = LineItems.FirstOrDefault();
-        var price  = lineItems.Price;
-        var qty = lineItems.Quantity;
-        LineItems.Add(new LineItem
+        if (LineItems.Count != 0)
         {
-       
-            ProductId = firstlineitem.ProductId ,
-            Name = lineItems.Name,
-            Quantity = qty,
-            Price = price,
-            Images = firstlineitem.Images,
-            //Subtotal = (price * qty).ToString("F2"),
-            //Total = (price * qty)
+            var firstlineitem = LineItems.FirstOrDefault();
+            var price = lineItems.Price;
+            var qty = lineItems.Quantity;
+            LineItems.Add(new LineItem
+            {
 
-        });
-         OnPropertyChanged(nameof(VisibleCustomFields));
+                ProductId = firstlineitem.ProductId,
+                Name = lineItems.Name,
+                Quantity = qty,
+                Price = price,
+                Images = firstlineitem.Images,
+                //Subtotal = (price * qty).ToString("F2"),
+                //Total = (price * qty)
+
+            });
+            OnPropertyChanged(nameof(VisibleCustomFields));
+        }
+        else
+        {
+            var price = lineItems.Price;
+            var qty = lineItems.Quantity;
+            LineItems.Add(new LineItem
+            {
+
+                Name = lineItems.Name,
+                Quantity = qty,
+                Price = price,
+                //Subtotal = (price * qty).ToString("F2"),
+                //Total = (price * qty)
+
+            });
+        }
     }
 
     private async void OnRemoveLineItemClicked(object sender, EventArgs e)
@@ -164,6 +193,18 @@ public partial class EditInvoicePage : ContentPage
             Order.Shipping.Email = entryShippingEmail.Text;
             Order.Shipping.Phone = entryShippingPhone.Text;
 
+            Order.Billing.FirstName = Order.Shipping.FirstName;
+            Order.Billing.LastName = Order.Billing.LastName;
+            Order.Billing.Company = Order.Shipping.Company;
+            Order.Billing.Address1 = Order.Shipping.Address1;
+            Order.Billing.Address2 = Order.Shipping.Address2;
+            Order.Billing.City = Order.Shipping.City;
+            Order.Billing.State = Order.Shipping.State;
+            Order.Billing.Postcode = Order.Shipping.Postcode;
+            Order.Billing.Country = Order.Shipping.Country;
+            Order.Billing.Email = Order.Shipping.Email;
+            Order.Billing.Phone = Order.Shipping.Phone;
+
             // Update amounts from UI
             if (decimal.TryParse(entryShippingTotal.Text, out decimal shippingTotal))
                 Order.ShippingTotal = shippingTotal;
@@ -180,8 +221,27 @@ public partial class EditInvoicePage : ContentPage
                 key = cf.Key,
                 value = cf.Value
             }).ToList();
-            
 
+            if (LineItems.Any(li => li.ProductId == 0))
+            {
+                // Get Advance value from CustomFields
+                decimal advanceValue = 0;
+                var advanceField = CustomFields.FirstOrDefault(cf => cf.Key == "Advance");
+                if (advanceField != null && decimal.TryParse(advanceField.Value, out var adv))
+                {
+                    advanceValue = adv;
+                }
+                Order.DateCreated = DateTime.Now;
+                Order.MetaData = CustomFields.Select(cf => new MetaData
+                {
+                    Key = cf.Key,
+                    Value = cf.Value
+                }).ToList();
+                Order.Total = Order.Total - advanceValue;
+
+                OnPrintButtonClicked(this, EventArgs.Empty);
+                return;
+            }
             // Call API to update order
             var success = await _wooCommerceService.UpdateOrderAsync(Order, metaData);
 
@@ -200,7 +260,28 @@ public partial class EditInvoicePage : ContentPage
             await DisplayAlert("Error", $"An error occurred: {ex.Message}", "OK");
         }
     }
+    private async void OnPrintButtonClicked(object sender, EventArgs e)
+    {
+        try
+        {
+            btnUpdate.IsEnabled = false;
+            btnUpdate.Text = "Generating PDF...";
 
+            await Task.Delay(10);
+
+            var order = Order;
+            if (order == null)
+            {
+                await DisplayAlert("Error", "Order data not found", "OK");
+                return;
+            }
+            await Navigation.PushAsync(new InvoicePage(_wooCommerceService,_pdfService,Order,Order.Id));
+        }
+        catch (Exception ex)
+        {
+            await DisplayAlert("Error", ex.Message, "OK");
+        }
+    }
     private async void OnCancelClicked(object sender, EventArgs e)
     {
         await Navigation.PopAsync();

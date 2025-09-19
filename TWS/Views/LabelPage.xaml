@@ -63,7 +63,8 @@
                                            VerticalOptions="Center"/>
                                     <VerticalStackLayout Grid.Column="1" Padding="10,0,0,0">
                                         <Label Text="THE WATCH STUDIO" Style="{StaticResource BoldLabel}" FontSize="16"/>
-                                        <Label Text="Silkwala Matrket Near Aone Coco 395003 Surat Gujarat India" Style="{StaticResource RegularLabel}"/>
+                                        <Label Text="02-03 Silkdom Market Near Aone Coco 395003" Style="{StaticResource RegularLabel}"/>
+                                        <Label Text="Surat Gujarat India" Style="{StaticResource RegularLabel}"/>
                                         <Label Text="Phone: +91 93168 59248" Style="{StaticResource RegularLabel}"/>
                                     </VerticalStackLayout>
                                 </Grid>
@@ -71,17 +72,17 @@
                                 <BoxView HeightRequest="2" Color="#2c3e50" Margin="0,5"/>
 
                                 <!-- Shipping From -->
-                                <Grid ColumnDefinitions="*,*" Margin="0,10,0,0">
+                                <Grid ColumnDefinitions="*,*" Margin="10,10,0,0">
                                     <VerticalStackLayout>
                                         <Label Text="SHIP FROM:" Style="{StaticResource BoldLabel}"/>
                                         <Label Text="THE WATCH STUDIO" Style="{StaticResource BoldLabel}" Margin="0,5,0,0"/>
-                                        <Label Text="Silkwala Market Near Aone Coco 395003" Style="{StaticResource RegularLabel}"/>
+                                        <Label Text="02-03 Silkdom Market Near Aone Coco 395003" Style="{StaticResource RegularLabel}"/>
                                         <Label Text="Surat,Gujarat India" Style="{StaticResource RegularLabel}"/>
                                         <Label Text="Phone: +91 93168 59248" Style="{StaticResource RegularLabel}"/>
                                     </VerticalStackLayout>
 
                                     <!-- Shipping To -->
-                                    <VerticalStackLayout Grid.Column="1">
+                                    <VerticalStackLayout Grid.Column="1" Padding="15,0,0,0">
                                         <Label Text="SHIP TO:" Style="{StaticResource BoldLabel}"/>
                                         <Label Text="{Binding Shipping.FullName}" Style="{StaticResource BoldLabel}" Margin="0,5,0,0"/>
                                         <Label Text="{Binding Shipping.Add}" Style="{StaticResource RegularLabel}"/>
@@ -123,7 +124,7 @@
                                             <Label Text="PAYMENT METHOD:" Style="{StaticResource BoldLabel}"/>
                                             <Label Text="{Binding PaymentMethod, Converter={StaticResource ToUpperConverter}}" 
                                                    Style="{StaticResource AmountLabel}" 
-                                                   VerticalTextAlignment="Center"/>
+                                                   HorizontalOptions="Center"/>
                                         </VerticalStackLayout>
 
                                         <!-- Total Amount Section -->
@@ -139,17 +140,86 @@
                                 <BoxView HeightRequest="2" Color="#2c3e50" Margin="0,10"/>
 
                                 <!-- QR Code Area -->
-                               
 
-                                <VerticalStackLayout HorizontalOptions="Center" Margin="0,10,0,0">
-                                    <Label Text="SCAN FOR DETAILS" Style="{StaticResource SmallLabel}" HorizontalOptions="Center"/>
-                                    <zxing:BarcodeGeneratorView 
-                                             Format="QrCode" 
-                                             Value="{Binding QrData}" 
-                                             WidthRequest="150" 
-                                             HeightRequest="150"/>
-                                    <Label Text="{Binding Id, StringFormat='Order ID: {0}'}" Style="{StaticResource SmallLabel}" 
-                                           HorizontalOptions="Center" Margin="0,5,0,0"/>
+
+                                <VerticalStackLayout HorizontalOptions="Center" Margin="0,2,0,0">
+                                    <Label Text="SCAN FOR DETAILS" 
+           Style="{StaticResource SmallLabel}" 
+           HorizontalOptions="Center" />
+
+                                    <!-- Horizontal layout for 3 QR codes -->
+                                    <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+
+                                        <!-- Instagram QR -->
+                                        <VerticalStackLayout HorizontalOptions="Center" WidthRequest="90">
+                                            <zxing:BarcodeGeneratorView 
+                Format="QrCode" 
+                Value="https://www.instagram.com/thewatchstudio.inn/" 
+                WidthRequest="80" 
+                HeightRequest="80" 
+                HorizontalOptions="Center" 
+                VerticalOptions="Center"/>
+
+                                            <!-- Logo + Text -->
+                                            <HorizontalStackLayout Spacing="5" HorizontalOptions="Center" Margin="0,0,0,0">
+                                                <Image Source="instagram.png" 
+                       WidthRequest="15" 
+                       HeightRequest="15" 
+                       VerticalOptions="Center"/>
+                                                <Label Text="Instagram" 
+                       FontSize="10" 
+                       VerticalOptions="Center"
+                       TextColor="Black"/>
+                                            </HorizontalStackLayout>
+                                        </VerticalStackLayout>
+
+                                        <!-- Website QR -->
+                                        <VerticalStackLayout HorizontalOptions="Center" WidthRequest="90">
+                                            <zxing:BarcodeGeneratorView 
+                Format="QrCode" 
+                Value="https://thewatchstudio.in/" 
+                WidthRequest="80" 
+                HeightRequest="80"
+                HorizontalOptions="Center" 
+                VerticalOptions="Center"/>
+
+                                            <!-- Logo + Text -->
+                                            <HorizontalStackLayout Spacing="5" HorizontalOptions="Center" Margin="0,0,0,0">
+                                                <Image Source="web.png" 
+                       WidthRequest="15" 
+                       HeightRequest="15" 
+                       VerticalOptions="Center"/>
+                                                <Label Text="Website" 
+                       FontSize="10" 
+                       VerticalOptions="Center"
+                       TextColor="Black"/>
+                                            </HorizontalStackLayout>
+                                        </VerticalStackLayout>
+
+                                        <!-- WhatsApp QR -->
+                                        <VerticalStackLayout HorizontalOptions="Center" WidthRequest="90">
+                                            <zxing:BarcodeGeneratorView 
+                Format="QrCode" 
+                Value="https://wa.me/919316859248" 
+                WidthRequest="80" 
+                HeightRequest="80" 
+                HorizontalOptions="Center" 
+                VerticalOptions="Center"/>
+
+                                            <!-- Logo + Text -->
+                                            <HorizontalStackLayout Spacing="5" HorizontalOptions="Center" Margin="0,0,0,0">
+                                                <Image Source="whatsapp.png" 
+                       WidthRequest="15" 
+                       HeightRequest="15" 
+                       VerticalOptions="Center"/>
+                                                <Label Text="WhatsApp" 
+                       FontSize="10" 
+                       VerticalOptions="Center"
+                       TextColor="Black"/>
+                                            </HorizontalStackLayout>
+                                        </VerticalStackLayout>
+
+                                    </HorizontalStackLayout>
                                 </VerticalStackLayout>
                             </VerticalStackLayout>
                         </DataTemplate>

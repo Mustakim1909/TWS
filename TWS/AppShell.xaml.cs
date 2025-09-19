@@ -8,6 +8,7 @@ namespace TWS
         {
             InitializeComponent();
             Routing.RegisterRoute("InvoicePage", typeof(InvoicePage));
+            Routing.RegisterRoute("LabelPage", typeof(LabelPage));
         }
     }
 }

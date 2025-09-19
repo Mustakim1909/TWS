@@ -25,7 +25,7 @@
         }
         private async void LoadInvoice(int orderId)
         {
-            await _viewModel.LoadOrder(orderId);
+            await _viewModel.LoadOrder(_order,orderId);
 
             //var htmlPath = Path.Combine(Directory.GetCurrentDirectory(), "Invoice.html");
 

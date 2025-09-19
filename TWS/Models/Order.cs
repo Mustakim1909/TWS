@@ -128,7 +128,7 @@ namespace TWS.Models
                 // Build the full structured string
                 var qrText =
         $@"ORDER DETAILS
---------------------
+------------------------
 Order ID   : {Id}
 Customer   : {Shipping.FullName}
 Address    : {Shipping.Add}, {Shipping.ShippingAddress}
@@ -138,7 +138,7 @@ Items:
 {items}
 
 Total      : ₹{Total:0}
-Payment    : {PaymentMethod}";
+Payment    : {PaymentMethod.ToUpper()}";
 
                 return qrText;
             }
@@ -161,6 +161,8 @@ Payment    : {PaymentMethod}";
                 };
             }
         }
+
+        public bool IsSelected { get; internal set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null)

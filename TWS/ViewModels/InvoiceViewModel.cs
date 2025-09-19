@@ -35,9 +35,12 @@ namespace TWS.ViewModels
 
         public Command GenerateHtmlCommand { get; }
 
-        public async Task LoadOrder(int orderId)
+        public async Task LoadOrder(Order order,int orderId)
         {
             Order = await _woocommerceService.GetOrderByIdAsync(orderId);
+            if (Order == null) {
+                Order = order;
+            }
             await GenerateHtml();
         }
 
@@ -61,7 +64,11 @@ namespace TWS.ViewModels
                 await imageStream.CopyToAsync(ms);
                 var bytes = ms.ToArray();
                 var base64 = Convert.ToBase64String(bytes);
-
+                string statusBadgeHtml = "";
+                if (Order.PaymentMethod.ToLower() == "prepaid")
+                {
+                    statusBadgeHtml = $"<div class=\"status-badge\"><i class=\"fas fa-check-circle\"></i> Paid</div>";
+                }
                 // Replace <img src="logo.jpg"/> in HTML with Base64
                 htmlTemplate = htmlTemplate.Replace("<img src=\"logo.jpg\"/>",
                                                     $"<img src='data:image/jpeg;base64,{base64}'/>");
@@ -82,7 +89,8 @@ namespace TWS.ViewModels
                     .Replace("{{DISCOUNT_AMOUNT}}", Order.TotalDiscount.ToString())
                     .Replace("{{PAYMENT_METHOD}}", Order.PaymentMethod.ToUpper())
                     .Replace("{{TOTAL_AMOUNT}}", $"₹{Order.Total}")
-                    .Replace("{{ADVANCE_PAYMENT}}", $"{advanceValue}");
+                    .Replace("{{ADVANCE_PAYMENT}}", $"{advanceValue}")
+                    .Replace("{{STATUS_BADGE}}", statusBadgeHtml);
 
                 // Generate line items HTML
                 var lineItemsHtml = new StringBuilder();

@@ -4,11 +4,13 @@
              xmlns:models="clr-namespace:TWS.Models"
              xmlns:converters="clr-namespace:TWS.Converters"
              x:Class="TWS.Views.LabelEditPage"
+             x:Name="ContentPage"
              Title="Edit Label"
              BackgroundColor="#F8F9FA">
 
     <ContentPage.Resources>
         <converters:PriceConverter x:Key="PriceConverter" />
+        <converters:ToUpperConverter x:Key="ToUpperConverter" />
     </ContentPage.Resources>
 
     <ScrollView>
@@ -21,6 +23,24 @@
                    BorderColor="#DDE1E6"
                    HasShadow="True">
                 <VerticalStackLayout Spacing="12">
+                    <Entry Text="{Binding Order.Id, Mode=TwoWay}"
+               FontSize="14"
+               Placeholder="Order Id"
+               PlaceholderColor="#9BA5B2"
+               FontAttributes="Bold"
+               TextColor="#4A6FA5"
+               Keyboard="Numeric"
+               Margin="0,0,0,5"/>
+
+                            <!-- Payment Method -->
+                    <Entry Text="{Binding Order.PaymentMethod, Mode=TwoWay,Converter={StaticResource ToUpperConverter}}"
+               FontSize="14"
+               Placeholder="Payment Method"
+               PlaceholderColor="#9BA5B2"
+               FontAttributes="Bold"
+               TextColor="#4A6FA5"
+               Margin="0,0,0,10"/>
+
                     <Label Text="Shipping Address" 
                            FontSize="16" 
                            FontAttributes="Bold"
